@@ -13,6 +13,7 @@ services:
     region: oregon
     branch: main
     plan: free
+    buildCommand: "./bin/render-build.sh"
     numInstances: 1
     healthCheckPath: /up
     preDeployCommand: bin/rails db:migrate
