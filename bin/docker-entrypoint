@@ -11,13 +11,13 @@ fi
 # recommended option by the Puma team (https://github.com/puma/puma#rails), but
 # the default Rails Dockerfile uses `./bin/rails server`
 
-# echo "${1}"
-# echo "${2}"
-# echo "${3}"
+echo "${1}"
+echo "${2}"
+echo "${3}"
 
 # # If running the rails server then create or migrate existing database
-# if [ "${1}" == "bundle" ] && [ "${2}" == "exec" ] && [ "${3}" == "puma" ]; then
-#   ./bin/rails db:prepare
-# fi
+if [ "${1}" == "bundle" ] && [ "${2}" == "exec" ] && [ "${3}" == "puma" ]; then
+  ./bin/rails db:prepare
+fi
 
 exec "${@}"
