@@ -28,15 +28,15 @@ services:
       - key: REDIS_HOST
         fromService:
           type: redis
-          name: lightning
+          name: maypoll_redis
           property: host # available properties are listed below
       - key: REDIS_PORT
         fromService:
           type: redis
-          name: lightning
+          name: maypoll_redis
           property: port
   - type: redis
-    name: lightning
+    name: maypoll_redis
     ipAllowList: # required
       - source: 0.0.0.0/0
         description: everywhere
