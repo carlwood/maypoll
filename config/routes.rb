@@ -11,5 +11,7 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  root "welcome#index"
+  resources :polls
+
+  root "polls#index"
 end

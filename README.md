@@ -135,3 +135,17 @@ Dockerizing Ruby and Rails development](https://evilmartians.com/chronicles/ruby
 - <https://twitter.com/ryanwi>
 - <https://hachyderm.io/@ryanwi>
 - <https://github.com/ryanwi>
+
+## TODO
+
+Poll model:
+- Question (varchar)
+- Options (varchar)
+- Multi or single choice (enum)
+- Maximum num of selections (num) if multi
+`bin/rails generate model Poll question:string options:text type:integer maxChoices:integer code:string adminCode:string`
+
+`bin/rails generate controller Polls index --skip-routes`
+
+PollResponse model:
+- 
