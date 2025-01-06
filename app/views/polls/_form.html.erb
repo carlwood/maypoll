@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :question %>
     <%= form.text_field :question %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :options %>
-    <%= form.rich_text_area :options %>
+    <%= form.text_area :options %>
   </div>
 
-  <div class="actions">
+  <div class="form-actions">
     <%= form.submit %>
   </div>
 <% end %>

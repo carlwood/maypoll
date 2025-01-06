@@ -23,3 +23,12 @@
     padding: 0 16px;
     max-width: 1200px;
  }
+
+ label {
+    display: block;
+    margin-bottom: 4px;
+ }
+
+ .form-group {
+    margin-bottom: 12px;
+ }
