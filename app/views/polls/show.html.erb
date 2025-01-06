@@ -1,9 +1,22 @@
-<%= turbo_stream_from @poll %>
-
-<p id="notice"><%= notice %></p>
-
-<%= render @poll %>
+<%= link_to "Back to polls", polls_path %>
 
 <div>
-  <%= link_to "Back to homepage", polls_path %>
+  <h1>
+    <%= @poll.question %>
+  </h1>
+
+  <p>
+    Posted <%= time_tag @poll.created_at %>
+  </p>
+
+  <p>
+    <strong>Options</strong>
+    <%= @poll.options %>
+  </p>
 </div>
+
+<div>
+  <%= button_to "Delete poll", poll_path(@poll), method: :delete %>
+</div>
+
+<hr>
