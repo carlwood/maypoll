@@ -1,7 +1,9 @@
 <div id="<%= dom_id poll %>">
-  <p>
-    <%= poll.question %>
-  </p>
+  <h2>
+    <%= link_to poll do %>
+      <%= poll.question %>
+    <% end %>
+  </h2>
 
   <p>
     Posted <%= time_tag poll.created_at %>
@@ -14,5 +16,7 @@
 </div>
 
 <div>
-  <%= link_to "Back to homepage", polls_path %>
+  <%= button_to "Delete poll", poll_path(poll), method: :delete %>
 </div>
+
+<hr>

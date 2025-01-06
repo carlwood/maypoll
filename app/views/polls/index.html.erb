@@ -1,2 +1,5 @@
 <h1>Polls</h1>
-<a href="/polls/new">Create a Poll</a>
+<%= link_to "Create new poll", new_poll_path %>
+
+<h2>Created polls</h2>
+<%= render @polls %>

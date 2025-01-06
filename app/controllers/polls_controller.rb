@@ -1,7 +1,9 @@
 class PollsController < ApplicationController
-  before_action :set_poll, only: %i[ show ]
+  before_action :set_poll, only: %i[ show destroy ]
 
-  def index; end
+  def index
+    @polls = Poll.all
+  end
 
   # GET /polls/new
   def new
@@ -20,6 +22,15 @@ class PollsController < ApplicationController
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @poll.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  # DELETE /poll/1 or /poll/1.json
+  def destroy
+    @poll.destroy
+    respond_to do |format|
+      format.html { redirect_to polls_url, notice: "Poll was successfully destroyed." }
+      format.json { head :no_content }
     end
   end
 
