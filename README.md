@@ -75,17 +75,17 @@ docker compose up --build
 
 ### with [BuildKit](https://docs.docker.com/build/buildkit/)
 ```
-DOCKER_BUILDKIT=1 docker build --tag rails-on-docker --load .
+DOCKER_BUILDKIT=1 docker build --tag maypoll --load .
 ```
 
 Test the image can be used and Rails starts up, use a fake key for testing purposes only:
 ```
-docker run --rm --env SECRET_KEY_BASE=dummy rails-on-docker
+docker run --rm --env SECRET_KEY_BASE=dummy maypoll
 ```
 
 ### With legacy builder (no BuildKit)
 ```
-docker build --tag rails-on-docker .
+docker build --tag maypoll .
 ```
 
 Test the image can be used and Rails starts up, use a fake key for testing purposes only:

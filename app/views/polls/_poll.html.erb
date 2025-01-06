@@ -1,0 +1,18 @@
+<div id="<%= dom_id poll %>">
+  <p>
+    <%= poll.question %>
+  </p>
+
+  <p>
+    Posted <%= time_tag poll.created_at %>
+  </p>
+
+  <p>
+    <strong>Options:</strong>
+    <%= poll.options %>
+  </p>
+</div>
+
+<div>
+  <%= link_to "Back to homepage", polls_path %>
+</div>
